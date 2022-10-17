@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --hs-duration: 800ms;
+  --hs-translate-y-amount: 6rem;
+  --hs-translate-x-amount: 6rem;
+}
+
+.gradient {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.slate.800');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.600');
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.slate.500');
+}

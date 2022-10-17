@@ -1,0 +1,15 @@
+---
+import HumbleAnimation from './HumbleAnimation.astro'
+
+const { heading, animation, callback, style, className } = Astro.props
+---
+
+<HumbleAnimation
+  animation={animation}
+  style={style}
+  callback={callback}>
+  <div class={`card py-14 px-14 flex flex-col space-y-20 justify-between items-start rounded-lg bg-slate-800 transition-colors duration-300 ${className ? className : ''}`}>
+    <h3 class="text-4xl text-center">{heading}</h3>
+    <code class="bg-slate-900 py-4 px-6 rounded-md flex"> {`<div data-hs="${animation}"></div>`}</code>
+  </div>
+</HumbleAnimation>

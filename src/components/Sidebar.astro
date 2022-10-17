@@ -1,0 +1,50 @@
+---
+import HumbleAnimation from './HumbleAnimation.astro'
+
+const menuItems = [
+  { name: 'Fade', href: '#fade' },
+  { name: 'Zoom', href: '#zoom' },
+  { name: 'Slide', href: '#slide' },
+  { name: 'Flip', href: '#flip' },
+  { name: 'Easings', href: '#easings' },
+  { name: 'Blur', href: '#blur' },
+  { name: 'Durations', href: '#durations' },
+  { name: 'Once', href: '#once' },
+]
+---
+
+<div class="rounded-lg h-full text-lg pt-20">
+  <HumbleAnimation
+    className="sticky top-8"
+    animation="fade right">
+    <div class="overflow-hidden mb-8">
+      <p class="text-2xl mb-4">Animations</p>
+      <ul>
+        {
+          menuItems.map((item) => (
+            <li>
+              <a
+                class="text-slate-50 hover:text-slate-300 duration-300 transition-all hover:pl-1"
+                href={item.href}>
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-2xl mb-4">Controls</p>
+      <label for="duration-input">
+        <span class="mb-2 flex">Duration</span>
+        <input
+          id="duration-input"
+          type="text"
+          value="600ms"
+          class="w-full rounded-md border border-slate-700 text-slate-400 bg-slate-900 p-2 mb-4"
+        />
+      </label>
+    </div>
+  </HumbleAnimation>
+</div>

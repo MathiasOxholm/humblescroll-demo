@@ -1,0 +1,13 @@
+---
+const { animation, callback, style, className, classNameInner } = Astro.props
+---
+
+<div
+  class={className}
+  data-hs={animation}
+  style={style}
+  data-hs-call={callback}>
+  <div class={`h-full w-full ${classNameInner ? classNameInner : ''}`}>
+    <slot />
+  </div>
+</div>
