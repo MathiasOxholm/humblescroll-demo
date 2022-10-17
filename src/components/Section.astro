@@ -3,10 +3,10 @@ import HumbleAnimation from './HumbleAnimation.astro'
 
 const { title, description, columns, id } = Astro.props
 
-let twCols = 'grid-cols-2'
+let twCols = 'lg:grid-cols-2'
 
 if (columns == 3) {
-  twCols = 'grid-cols-3'
+  twCols = 'lg:grid-cols-3'
 }
 ---
 

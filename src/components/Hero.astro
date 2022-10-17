@@ -2,7 +2,7 @@
 import HumbleAnimation from './HumbleAnimation.astro'
 ---
 
-<section class="h-screen p-4 lg:p-10">
+<section class="h-screen p-4 lg:p-10 overflow-hidden">
   <div
     id="logo"
     class="absolute top-10 lg:top-20 left-10 lg:left-20 z-10"
@@ -19,11 +19,11 @@ import HumbleAnimation from './HumbleAnimation.astro'
       <div class="h-full w-full rounded-xl gradient"></div>
     </div>
 
-    <div class="container text-center flex flex-col items-center justify-center space-y-14 relative">
+    <div class="container text-center flex flex-col items-center justify-center space-y-14 relative px-6">
       <HumbleAnimation
         animation="fade up blur large"
         style="--hs-delay: 100ms">
-        <h1 class="text-5xl lg:text-7xl xl:text-8xl font-bold max-w-2xl lg:max-w-3xl xl:max-w-4xl">A simple scroll animation library</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold max-w-2xl lg:max-w-3xl xl:max-w-4xl">A simple scroll animation library</h1>
       </HumbleAnimation>
 
       <HumbleAnimation
@@ -53,7 +53,8 @@ import HumbleAnimation from './HumbleAnimation.astro'
           data-hs="fade left blur small"
           style="--hs-delay: 400ms">
           <a
-            href="#!"
+            href="https://github.com/MathiasOxholm/humbleScroll"
+            target="_blank"
             id="button-2-text"
             class="flex text-white px-10 py-5 text-lg rounded-lg font-semibold border border-white overflow-hidden text-center justify-center"
             data-hs="fade left small once">
