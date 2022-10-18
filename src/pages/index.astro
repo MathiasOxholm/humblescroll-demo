@@ -12,50 +12,66 @@ import "../styles/style.css";
   <Hero />
   <div class="container">
     <div class="grid lg:grid-cols-12 px-6 lg:px-8 pb-8 gap-10">
-      <div class="lg:col-span-9 overflow-hidden">
+      <div class="lg:col-span-9">
         <Section
           id="fade"
           title="Fade animations"
           description="Opacity from 0 to 1 - you know the drill."
         >
-          <Card heading="Fade up" animation="fade up" />
-          <Card heading="Fade down" animation="fade down" />
-          <Card heading="Fade right" animation="fade right" />
-          <Card heading="Fade left" animation="fade left" />
-          <Card heading="Fade in" animation="fade" />
+          <Card heading="Fade up" animation="fade up" code="true" />
+          <Card heading="Fade down" animation="fade down" code="true" />
+          <Card heading="Fade right" animation="fade right" code="true" />
+          <Card heading="Fade left" animation="fade left" code="true" />
+          <Card heading="Fade in" animation="fade" code="true" />
         </Section>
 
         <Section
           id="zoom"
           title="Zoom animations"
           description="Zoom in and out. Perfect for images."
+          code="true"
         >
-          <Card heading="Zoom in" animation="zoom-in" />
-          <Card heading="Zoom out" animation="zoom-out" />
-          <Card heading="Zoom out + right + up" animation="zoom-out right up" />
-          <Card heading="Zoom in + left + up" animation="zoom-in left up" />
+          <Card heading="Zoom in" animation="zoom-in" code="true" />
+          <Card heading="Zoom out" animation="zoom-out" code="true" />
+          <Card
+            heading="Zoom out + right + up"
+            animation="zoom-out right up"
+            code="true"
+          />
+          <Card
+            heading="Zoom in + left + up"
+            animation="zoom-in left up"
+            code="true"
+          />
         </Section>
 
         <Section
           id="slide"
           title="Slide animations"
           description="Slide to the left, slide it to the right!"
+          code="true"
         >
-          <Card heading="Slide right" animation="right" callback="test" />
-          <Card heading="Slide left" animation="left" />
-          <Card heading="Slide up" animation="right up" />
-          <Card heading="Slide down" animation="left up" />
+          <Card
+            heading="Slide right"
+            animation="right"
+            callback="test"
+            code="true"
+          />
+          <Card heading="Slide left" animation="left" code="true" />
+          <Card heading="Slide up" animation="right up" code="true" />
+          <Card heading="Slide down" animation="left up" code="true" />
         </Section>
 
         <Section
           id="flip"
           title="Flip animations"
           description="Who uses these? Here's four of them anyway."
+          code="true"
         >
-          <Card heading="Flip right" animation="flip-right" />
-          <Card heading="Flip left" animation="flip-left" />
-          <Card heading="Flip up" animation="flip-up" />
-          <Card heading="Flip down" animation="flip-down" />
+          <Card heading="Flip right" animation="flip-right" code="true" />
+          <Card heading="Flip left" animation="flip-left" code="true" />
+          <Card heading="Flip up" animation="flip-up" code="true" />
+          <Card heading="Flip down" animation="flip-down" code="true" />
         </Section>
 
         <Section
@@ -64,9 +80,13 @@ import "../styles/style.css";
           description="We only ship with a few easings, but you can easily add your own."
           columns={3}
         >
-          <Card heading="Ease in" animation="ease-in fade up" />
-          <Card heading="Ease out" animation="ease-out fade up" />
-          <Card heading="Ease in out" animation="ease-in-out fade up" />
+          <Card heading="Ease in" animation="ease-in fade up" code="true" />
+          <Card heading="Ease out" animation="ease-out fade up" code="true" />
+          <Card
+            heading="Ease in out"
+            animation="ease-in-out fade up"
+            code="true"
+          />
         </Section>
 
         <Section
@@ -75,13 +95,14 @@ import "../styles/style.css";
           description="Who doesn't like a good motion blur effect?"
           columns={3}
         >
-          <Card heading="Blur effect" animation="fade right blur" />
+          <Card heading="Blur effect" animation="fade right blur" code="true" />
           <Card
             heading="Blur effect"
             animation="zoom-in fade up blur"
             style="--hs-blur: 40px"
+            code="true"
           />
-          <Card heading="Blur effect" animation="fade left blur" />
+          <Card heading="Blur effect" animation="fade left blur" code="true" />
         </Section>
 
         <Section
@@ -92,15 +113,22 @@ import "../styles/style.css";
           <Card
             heading="Slow"
             animation="zoom-in fade up right blur 2xl slow"
+            code="true"
           />
           <Card
             heading="Extra slow"
             animation="fade up left blur 2xl extra-slow"
+            code="true"
           />
-          <Card heading="Fast" animation="fade up right blur 2xl fast" />
+          <Card
+            heading="Fast"
+            animation="fade up right blur 2xl fast"
+            code="true"
+          />
           <Card
             heading="Extra fast"
             animation="fade up left blur 2xl extra-fast"
+            code="true"
           />
         </Section>
 
@@ -109,8 +137,41 @@ import "../styles/style.css";
           title="Once"
           description="Stays visible even with repeat or mirror enabled"
         >
-          <Card heading="Once" animation="fade up once" />
-          <Card heading="Not once" animation="fade up" />
+          <Card heading="Once" animation="fade up once" code="true" />
+          <Card heading="Not once" animation="fade up" code="true" />
+        </Section>
+
+        <Section
+          id="callback"
+          title="JS Callback"
+          description="Call a function when the element is visible"
+        >
+          <div class="lg:col-span-2">
+            <Card
+              heading="Custom event 1"
+              animation="fade up once"
+              id="callback-card-1"
+            >
+              <code
+                class="bg-slate-900 py-4 px-6 rounded-md flex text-base font-mono"
+              >
+                <span class="text-blue-300">data-hs-call</span>
+                <span class="text-blue-400">=</span>
+                <span class="text-purple-400">"myFunction"</span>
+              </code>
+            </Card>
+          </div>
+          <div class="lg:col-span-2">
+            <Card heading="Custom event 2" animation="fade up once">
+              <code
+                class="bg-slate-900 py-4 px-6 rounded-md flex text-base font-mono"
+              >
+                <span class="text-blue-300">data-hs-call</span>
+                <span class="text-blue-400">=</span>
+                <span class="text-purple-400">"myFunction2"</span>
+              </code>
+            </Card>
+          </div>
         </Section>
       </div>
       <div class="lg:col-span-3 hidden lg:block">

@@ -30,11 +30,11 @@ onMounted(() => {
 
 <template>
   <label>
-    <span class="mb-1 flex text-slate-400 text-sm">{{ title }}</span>
+    <span class="mb-1 flex text-white text-sm opacity-50">{{ title }}</span>
     <input
       ref="input"
       :type="type"
-      class="w-full rounded-md border border-slate-700 text-slate-50 bg-slate-900 p-2 outline-none focus:border-slate-500 transition-colors duration-300"
+      class="w-full rounded-md text-slate-50 bg-slate-900 p-2 outline-none focus:border-slate-500 transition-colors duration-300"
       @change="change"
     />
   </label>
