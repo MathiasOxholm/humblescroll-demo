@@ -1,22 +1,23 @@
 ---
-import HumbleAnimation from './HumbleAnimation.astro'
+import HumbleAnimation from "./HumbleAnimation.astro";
+import Input from "./Input.vue";
 
 const menuItems = [
-  { name: 'Fade', href: '#fade' },
-  { name: 'Zoom', href: '#zoom' },
-  { name: 'Slide', href: '#slide' },
-  { name: 'Flip', href: '#flip' },
-  { name: 'Easings', href: '#easings' },
-  { name: 'Blur', href: '#blur' },
-  { name: 'Durations', href: '#durations' },
-  { name: 'Once', href: '#once' },
-]
+  { name: "Fade", href: "#fade" },
+  { name: "Zoom", href: "#zoom" },
+  { name: "Slide", href: "#slide" },
+  { name: "Flip", href: "#flip" },
+  { name: "Easings", href: "#easings" },
+  { name: "Blur", href: "#blur" },
+  { name: "Durations", href: "#durations" },
+  { name: "Once", href: "#once" },
+];
 ---
 
 <div class="rounded-lg h-full text-lg pt-20">
-  <HumbleAnimation
-    className="sticky top-8"
-    animation="fade right">
+  <div
+    class="sticky top-8 border border-slate-700 py-8 px-6 overflow-hidden rounded-lg"
+  >
     <div class="overflow-hidden mb-8">
       <p class="text-2xl mb-4">Animations</p>
       <ul>
@@ -25,7 +26,8 @@ const menuItems = [
             <li>
               <a
                 class="text-slate-50 hover:text-slate-300 duration-300 transition-all hover:pl-1"
-                href={item.href}>
+                href={item.href}
+              >
                 {item.name}
               </a>
             </li>
@@ -36,15 +38,24 @@ const menuItems = [
 
     <div>
       <p class="text-2xl mb-4">Controls</p>
-      <label for="duration-input">
-        <span class="mb-2 flex">Duration</span>
-        <input
-          id="duration-input"
+      <div class="grid 2xl:grid-cols-2 gap-4">
+        <Input title="Duration" cssProp="duration" type="text" client:visible />
+        <Input title="Delay" cssProp="delay" type="text" client:visible />
+        <Input
+          title="Translate X"
+          cssProp="translate-x-amount"
           type="text"
-          value="600ms"
-          class="w-full rounded-md border border-slate-700 text-slate-400 bg-slate-900 p-2 mb-4"
+          client:visible
         />
-      </label>
+        <Input
+          title="Translate Y"
+          cssProp="translate-y-amount"
+          type="text"
+          client:visible
+        />
+        <Input title="Scale" cssProp="scale" type="number" client:visible />
+        <Input title="Rotate" cssProp="rotate" type="text" client:visible />
+      </div>
     </div>
-  </HumbleAnimation>
+  </div>
 </div>

@@ -1,29 +1,25 @@
 ---
-import HumbleAnimation from './HumbleAnimation.astro'
+import HumbleAnimation from "./HumbleAnimation.astro";
 
-const { title, description, columns, id } = Astro.props
+const { title, description, columns, id } = Astro.props;
 
-let twCols = 'lg:grid-cols-2'
+let twCols = "lg:grid-cols-2";
 
 if (columns == 3) {
-  twCols = 'lg:grid-cols-3'
+  twCols = "lg:grid-cols-3";
 }
 ---
 
-<section
-  id={id}
-  class="flex flex-col justify-center py-20">
-  <div class="container">
-    <div class="mb-16 flex flex-col space-y-6 text-center">
-      <HumbleAnimation animation="fade up once">
-        <h2 class="text-4xl lg:text-5xl">{title}</h2>
-      </HumbleAnimation>
-      <HumbleAnimation animation="fade up once">
-        <p class="text-lg text-slate-400">{description}</p>
-      </HumbleAnimation>
-    </div>
-    <div class={`grid ${twCols} gap-8`}>
-      <slot />
-    </div>
+<section id={id} class="flex flex-col justify-center py-20">
+  <div class="mb-16 flex flex-col space-y-6">
+    <HumbleAnimation animation="fade up once">
+      <h2 class="text-4xl lg:text-5xl">{title}</h2>
+    </HumbleAnimation>
+    <HumbleAnimation animation="fade up once">
+      <p class="text-lg text-slate-400">{description}</p>
+    </HumbleAnimation>
+  </div>
+  <div class={`grid ${twCols} gap-8`}>
+    <slot />
   </div>
 </section>

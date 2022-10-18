@@ -1,187 +1,121 @@
 ---
-import Card from '../components/Card.astro'
-import Hero from '../components/Hero.astro'
-import Section from '../components/Section.astro'
-import Sidebar from '../components/Sidebar.astro'
-import Layout from '../layouts/Layout.astro'
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Layout from "../layouts/Layout.astro";
 
-import '../styles/style.css'
+import "../styles/style.css";
 ---
 
 <Layout>
   <Hero />
-  <div class="grid lg:grid-cols-12 px-6 lg:px-8 pb-8 gap-16">
-    <div class="lg:col-span-2 hidden lg:block">
-      <Sidebar />
-    </div>
-    <div class="lg:col-span-8 overflow-hidden">
-      <Section
-        id="fade"
-        title="Fade animations"
-        description="Opacity from 0 to 1 - you know the drill.">
-        <Card
-          heading="Fade up"
-          animation="fade up"
-        />
-        <Card
-          heading="Fade down"
-          animation="fade down"
-        />
-        <Card
-          heading="Fade right"
-          animation="fade right"
-        />
-        <Card
-          heading="Fade left"
-          animation="fade left"
-        />
-        <Card
-          heading="Fade in"
-          animation="fade"
-        />
-      </Section>
+  <div class="container">
+    <div class="grid lg:grid-cols-12 px-6 lg:px-8 pb-8 gap-10">
+      <div class="lg:col-span-9 overflow-hidden">
+        <Section
+          id="fade"
+          title="Fade animations"
+          description="Opacity from 0 to 1 - you know the drill."
+        >
+          <Card heading="Fade up" animation="fade up" />
+          <Card heading="Fade down" animation="fade down" />
+          <Card heading="Fade right" animation="fade right" />
+          <Card heading="Fade left" animation="fade left" />
+          <Card heading="Fade in" animation="fade" />
+        </Section>
 
-      <Section
-        id="zoom"
-        title="Zoom animations"
-        description="Zoom in and out. Perfect for images.">
-        <Card
-          heading="Zoom in"
-          animation="zoom-in"
-        />
-        <Card
-          heading="Zoom out"
-          animation="zoom-out"
-        />
-        <Card
-          heading="Zoom out + right + up"
-          animation="zoom-out right up"
-        />
-        <Card
-          heading="Zoom in + left + up"
-          animation="zoom-in left up"
-        />
-      </Section>
+        <Section
+          id="zoom"
+          title="Zoom animations"
+          description="Zoom in and out. Perfect for images."
+        >
+          <Card heading="Zoom in" animation="zoom-in" />
+          <Card heading="Zoom out" animation="zoom-out" />
+          <Card heading="Zoom out + right + up" animation="zoom-out right up" />
+          <Card heading="Zoom in + left + up" animation="zoom-in left up" />
+        </Section>
 
-      <Section
-        id="slide"
-        title="Slide animations"
-        description="Slide to the left, slide it to the right!">
-        <Card
-          heading="Slide right"
-          animation="right"
-          callback="test"
-        />
-        <Card
-          heading="Slide left"
-          animation="left"
-        />
-        <Card
-          heading="Slide up"
-          animation="right up"
-        />
-        <Card
-          heading="Slide down"
-          animation="left up"
-        />
-      </Section>
+        <Section
+          id="slide"
+          title="Slide animations"
+          description="Slide to the left, slide it to the right!"
+        >
+          <Card heading="Slide right" animation="right" callback="test" />
+          <Card heading="Slide left" animation="left" />
+          <Card heading="Slide up" animation="right up" />
+          <Card heading="Slide down" animation="left up" />
+        </Section>
 
-      <Section
-        id="flip"
-        title="Flip animations"
-        description="Who uses these? Here's four of them anyway.">
-        <Card
-          heading="Flip right"
-          animation="flip-right"
-        />
-        <Card
-          heading="Flip left"
-          animation="flip-left"
-        />
-        <Card
-          heading="Flip up"
-          animation="flip-up"
-        />
-        <Card
-          heading="Flip down"
-          animation="flip-down"
-        />
-      </Section>
+        <Section
+          id="flip"
+          title="Flip animations"
+          description="Who uses these? Here's four of them anyway."
+        >
+          <Card heading="Flip right" animation="flip-right" />
+          <Card heading="Flip left" animation="flip-left" />
+          <Card heading="Flip up" animation="flip-up" />
+          <Card heading="Flip down" animation="flip-down" />
+        </Section>
 
-      <Section
-        id="easings"
-        title="Easings"
-        description="We only ship with a few easings, but you can easily add your own."
-        columns={3}>
-        <Card
-          heading="Ease in"
-          animation="ease-in fade up"
-        />
-        <Card
-          heading="Ease out"
-          animation="ease-out fade up"
-        />
-        <Card
-          heading="Ease in out"
-          animation="ease-in-out fade up"
-        />
-      </Section>
+        <Section
+          id="easings"
+          title="Easings"
+          description="We only ship with a few easings, but you can easily add your own."
+          columns={3}
+        >
+          <Card heading="Ease in" animation="ease-in fade up" />
+          <Card heading="Ease out" animation="ease-out fade up" />
+          <Card heading="Ease in out" animation="ease-in-out fade up" />
+        </Section>
 
-      <Section
-        id="blur"
-        title="Blur effect"
-        description="Who doesn't like a good motion blur effect?"
-        columns={3}>
-        <Card
-          heading="Blur effect"
-          animation="fade right blur"
-        />
-        <Card
-          heading="Blur effect"
-          animation="zoom-in fade up blur"
-          style="--hs-blur: 40px"
-        />
-        <Card
-          heading="Blur effect"
-          animation="fade left blur"
-        />
-      </Section>
+        <Section
+          id="blur"
+          title="Blur effect"
+          description="Who doesn't like a good motion blur effect?"
+          columns={3}
+        >
+          <Card heading="Blur effect" animation="fade right blur" />
+          <Card
+            heading="Blur effect"
+            animation="zoom-in fade up blur"
+            style="--hs-blur: 40px"
+          />
+          <Card heading="Blur effect" animation="fade left blur" />
+        </Section>
 
-      <Section
-        id="durations"
-        title="Durations"
-        description="Gotta go fast! Scales from the global duration.">
-        <Card
-          heading="Slow"
-          animation="zoom-in fade up right blur 2xl slow"
-        />
-        <Card
-          heading="Extra slow"
-          animation="fade up left blur 2xl extra-slow"
-        />
-        <Card
-          heading="Fast"
-          animation="fade up right blur 2xl fast"
-        />
-        <Card
-          heading="Extra fast"
-          animation="fade up left blur 2xl extra-fast"
-        />
-      </Section>
+        <Section
+          id="durations"
+          title="Durations"
+          description="Gotta go fast! Scales from the global duration."
+        >
+          <Card
+            heading="Slow"
+            animation="zoom-in fade up right blur 2xl slow"
+          />
+          <Card
+            heading="Extra slow"
+            animation="fade up left blur 2xl extra-slow"
+          />
+          <Card heading="Fast" animation="fade up right blur 2xl fast" />
+          <Card
+            heading="Extra fast"
+            animation="fade up left blur 2xl extra-fast"
+          />
+        </Section>
 
-      <Section
-        id="once"
-        title="Once"
-        description="Stays visible even with repeat or mirror enabled">
-        <Card
-          heading="Once"
-          animation="fade up once"
-        />
-        <Card
-          heading="Not once"
-          animation="fade up"
-        />
-      </Section>
+        <Section
+          id="once"
+          title="Once"
+          description="Stays visible even with repeat or mirror enabled"
+        >
+          <Card heading="Once" animation="fade up once" />
+          <Card heading="Not once" animation="fade up" />
+        </Section>
+      </div>
+      <div class="lg:col-span-3 hidden lg:block">
+        <Sidebar />
+      </div>
     </div>
   </div>
 </Layout>
