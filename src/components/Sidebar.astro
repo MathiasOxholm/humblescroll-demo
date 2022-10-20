@@ -1,31 +1,32 @@
 ---
-import HumbleAnimation from './HumbleAnimation.astro'
-import Input from './Input.vue'
+import HumbleAnimation from "./HumbleAnimation.astro";
+import Input from "./Input.vue";
 
 const menuItems = [
-  { name: 'Fade', href: '#fade' },
-  { name: 'Zoom', href: '#zoom' },
-  { name: 'Slide', href: '#slide' },
-  { name: 'Flip', href: '#flip' },
-  { name: 'Easings', href: '#easings' },
-  { name: 'Blur', href: '#blur' },
-  { name: 'Durations', href: '#durations' },
-  { name: 'Once', href: '#once' },
-  { name: 'JS events', href: '#callback' },
-]
+  { name: "Fade", href: "#fade" },
+  { name: "Zoom", href: "#zoom" },
+  { name: "Slide", href: "#slide" },
+  { name: "Flip", href: "#flip" },
+  { name: "Easings", href: "#easings" },
+  { name: "Blur", href: "#blur" },
+  { name: "Durations", href: "#durations" },
+  { name: "Once", href: "#once" },
+  { name: "JS events", href: "#callback" },
+];
 ---
 
 <div class="rounded-lg h-full text-lg pt-20">
   <div class="sticky top-8 py-8 px-6 overflow-hidden rounded-lg gradient">
     <div class="overflow-hidden mb-8">
-      <p class="text-2xl mb-4">Animations</p>
+      <p class="text-2xl mb-4">Overview</p>
       <ul>
         {
           menuItems.map((item) => (
             <li>
               <a
                 class="text-slate-50 hover:text-slate-300 duration-300 transition-all hover:pl-1"
-                href={item.href}>
+                href={item.href}
+              >
                 {item.name}
               </a>
             </li>
@@ -37,18 +38,8 @@ const menuItems = [
     <div>
       <p class="text-2xl mb-4">Customize</p>
       <div class="grid 2xl:grid-cols-2 gap-4">
-        <Input
-          title="Duration"
-          cssProp="duration"
-          type="text"
-          client:visible
-        />
-        <Input
-          title="Delay"
-          cssProp="delay"
-          type="text"
-          client:visible
-        />
+        <Input title="Duration" cssProp="duration" type="text" client:visible />
+        <Input title="Delay" cssProp="delay" type="text" client:visible />
         <Input
           title="Translate X"
           cssProp="translate-x-amount"
@@ -61,18 +52,8 @@ const menuItems = [
           type="text"
           client:visible
         />
-        <Input
-          title="Scale"
-          cssProp="scale"
-          type="number"
-          client:visible
-        />
-        <Input
-          title="Rotate"
-          cssProp="rotate"
-          type="text"
-          client:visible
-        />
+        <Input title="Scale" cssProp="scale" type="number" client:visible />
+        <Input title="Rotate" cssProp="rotate" type="text" client:visible />
       </div>
     </div>
   </div>
