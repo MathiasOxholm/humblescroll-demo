@@ -1,11 +1,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>HumbleScroll Demo</title>
     <meta
       name="description"
       content="HumbleScroll is a lightweight animation on scroll Javascript library. It's easy to use and has no dependencies."
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/gh/MathiasOxholm/humbleScroll@latest/cdn/css/humbleScroll.min.css"
+      as="style"
     />
     <link
       rel="stylesheet"
@@ -17,10 +25,7 @@
       <slot />
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/gh/MathiasOxholm/humbleScroll@latest/cdn/js/humbleScroll.js"
-      is:inline
-    ></script>
-    <script src="/main.js" is:inline></script>
+    <script src="https://cdn.jsdelivr.net/gh/MathiasOxholm/humbleScroll@latest/cdn/js/humbleScroll.js" is:inline defer></script>
+    <script src="/main.js" is:inline defer></script>
   </body>
 </html>
