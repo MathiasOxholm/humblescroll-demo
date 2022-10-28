@@ -1,5 +1,5 @@
 ---
-import HumbleAnimation from "./HumbleAnimation.astro";
+import HumbleAnimation from './HumbleAnimation.astro'
 ---
 
 <section class="h-screen p-4 lg:p-10 overflow-hidden">
@@ -7,8 +7,7 @@ import HumbleAnimation from "./HumbleAnimation.astro";
     id="logo"
     class="absolute top-10 lg:top-20 left-10 lg:left-20 z-10"
     data-hs="fade left blur once"
-    style="--hs-delay: 600ms"
-  >
+    style="--hs-delay: 600ms">
     <div>HumbleScroll.js</div>
   </div>
   <div class="h-full w-full flex flex-col justify-center relative">
@@ -16,32 +15,22 @@ import HumbleAnimation from "./HumbleAnimation.astro";
       id="gradient-bg"
       class="absolute h-full w-full"
       data-hs="flip-down fade up lg once slow"
-      style="--hs-translate-y-amount: 10rem"
-    >
+      style="--hs-translate-y-amount: 10rem; --hs-flip-x-amount: 45deg;">
       <div class="h-full w-full rounded-xl gradient"></div>
     </div>
 
-    <div
-      class="container text-center flex flex-col items-center justify-center space-y-14 relative px-6"
-    >
+    <div class="container text-center flex flex-col items-center justify-center space-y-14 relative px-6">
       <HumbleAnimation
         animation="fade flip-up up xl blur"
-        style="--hs-delay: 100ms"
-      >
-        <h1
-          class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold max-w-2xl lg:max-w-3xl xl:max-w-4xl"
-        >
-          A simple scroll animation library
-        </h1>
+        style="--hs-delay: 100ms">
+        <h1 class="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold max-w-2xl lg:max-w-3xl xl:max-w-4xl">A simple scroll animation library</h1>
       </HumbleAnimation>
 
-      <HumbleAnimation animation="fade up lg blur" style="--hs-delay: 200ms">
+      <HumbleAnimation
+        animation="fade up lg blur"
+        style="--hs-delay: 200ms">
         <p class="text-2xl max-w-2xl">
-          <span class="opacity-80"
-            >HumbleScroll is a lightweight animation on scroll Javascript
-            library. It's easy to use and has no dependencies. It's also very
-            small, only 2kb gzipped.</span
-          >
+          <span class="opacity-80">HumbleScroll is a lightweight animation on scroll Javascript library. It's easy to use and has no dependencies. It's also very small, only 2kb gzipped.</span>
         </p>
       </HumbleAnimation>
 
@@ -49,14 +38,12 @@ import HumbleAnimation from "./HumbleAnimation.astro";
         <div
           id="button-1"
           data-hs="fade phone:up tablet:right blur small"
-          style="--hs-delay: 400ms"
-        >
+          style="--hs-delay: 400ms">
           <a
             href="#fade"
             id="button-1-text"
             class="flex bg-white text-zinc-900 px-10 py-5 text-lg rounded-lg font-semibold overflow-hidden text-center justify-center"
-            data-hs="fade phone:up tablet:right small once"
-          >
+            data-hs="fade phone:up tablet:right small once">
             <span class="fade flex">See it in action</span>
           </a>
         </div>
@@ -64,15 +51,13 @@ import HumbleAnimation from "./HumbleAnimation.astro";
         <div
           id="button-2"
           data-hs="fade phone:up tablet:left blur small"
-          style="--hs-delay: 400ms"
-        >
+          style="--hs-delay: 400ms">
           <a
             href="https://github.com/MathiasOxholm/humbleScroll"
             target="_blank"
             id="button-2-text"
             class="flex text-white px-10 py-5 text-lg rounded-lg font-semibold border border-white overflow-hidden text-center justify-center"
-            data-hs="fade phone:up tablet:left small once"
-          >
+            data-hs="fade phone:up tablet:left small once">
             <span class="flex">Grab the code</span>
           </a>
         </div>
