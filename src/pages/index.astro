@@ -132,10 +132,61 @@ import '../styles/style.css'
         </Section>
 
         <Section
+          id="skew"
+          title="Skew animations"
+          description="Skew it to the left, skew it to the right! Combine with blur to make them feel blazingly fast.">
+          <Card
+            heading="Skew right"
+            animation="skew-right fade right 2xl blur fast ease-out-back"
+            code="true"
+          />
+          <Card
+            heading="Skew left"
+            animation="skew-left fade left 2xl blur fast ease-out-back"
+            code="true"
+          />
+          <Card
+            heading="Skew up"
+            animation="skew-up fade up xl blur fast ease-out-back"
+            code="true"
+          />
+          <Card
+            heading="Skew down"
+            animation="skew-down fade down xl blur fast ease-out-back"
+            code="true"
+          />
+        </Section>
+
+        <Section
+          id="reveal"
+          title="Reveal"
+          description="Parent has overflow hidden and child slides from 100% to 0">
+          <Card
+            heading="Reveal up"
+            animation="reveal-up fade"
+            code="true"
+          />
+          <Card
+            heading="Reveal down"
+            animation="reveal-down fade"
+            code="true"
+          />
+          <Card
+            heading="Reveal right"
+            animation="reveal-right fade"
+            code="true"
+          />
+          <Card
+            heading="Reveal left"
+            animation="reveal-left fade"
+            code="true"
+          />
+        </Section>
+
+        <Section
           id="easings"
           title="Easings"
-          description="We only ship with a few easings, but you can easily add your own."
-          columns={3}>
+          description="We only ship with a few easings, but you can easily add your own.">
           <Card
             heading="Ease in"
             animation="ease-in fade up"
@@ -149,6 +200,11 @@ import '../styles/style.css'
           <Card
             heading="Ease in out"
             animation="ease-in-out fade up"
+            code="true"
+          />
+          <Card
+            heading="Ease out back"
+            animation="ease-out-back fade up"
             code="true"
           />
         </Section>
@@ -200,6 +256,26 @@ import '../styles/style.css'
             animation="fade up left blur 2xl extra-fast"
             code="true"
           />
+        </Section>
+
+        <Section
+          id="stagger"
+          title="Stagger"
+          description="Adjust delay for each item in a loop">
+          <div
+            class="col-span-2 grid lg:grid-cols-4 gap-2"
+            data-hs="fade up">
+            {
+              Array.from({ length: 8 }).map((_, i) => (
+                <Card
+                  heading={`Card ${i + 1}`}
+                  className="min-h-[200px]"
+                  style={`--hs-delay: ${i}00ms`}>
+                  <p>{`--hs-delay: ${i}00ms`}</p>
+                </Card>
+              ))
+            }
+          </div>
         </Section>
 
         <Section
