@@ -262,15 +262,14 @@ import '../styles/style.css'
           id="stagger"
           title="Stagger"
           description="Adjust delay for each item in a loop">
-          <div
-            class="col-span-2 grid lg:grid-cols-4 gap-2"
-            data-hs="fade up">
+          <div class="col-span-2 grid lg:grid-cols-4 gap-2">
             {
               Array.from({ length: 8 }).map((_, i) => (
                 <Card
                   heading={`Card ${i + 1}`}
                   className="min-h-[200px]"
-                  style={`--hs-delay: ${i}00ms`}>
+                  style={`--hs-delay: ${i}00ms`}
+                  animation="fade up">
                   <p>{`--hs-delay: ${i}00ms`}</p>
                 </Card>
               ))
